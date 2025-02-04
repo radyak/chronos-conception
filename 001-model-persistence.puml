@@ -1,0 +1,30 @@
+@startuml
+
+entity Entity
+metaclass EntityAttribute
+enum AttributeValue
+interface Profile
+interface AttributeSpecification
+interface DateSpecSpecification
+interface RelationSpecification
+enum DateSpecType
+enum RelationType
+
+Entity --|> EntityAttribute
+Entity --|> Profile
+Entity --|> DateSpec
+
+Entity --|> Relation
+Relation --|> Entity
+Relation --|> RelationType
+
+DateSpec --|> DateSpecType
+
+Profile --|> AttributeSpecification
+Profile --|> DateSpecSpecification
+Profile --|> RelationSpecification
+
+EntityAttribute --|> AttributeSpecification
+EntityAttribute --|> AttributeValue
+
+@enduml
